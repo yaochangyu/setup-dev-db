@@ -1,3 +1,3 @@
-/mnt/d/lab/lab-db/
+/mnt/d/lab/setup-dev-db/
 ├── .gitignore
 └── docker-compose.yml
