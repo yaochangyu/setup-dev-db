@@ -4,7 +4,7 @@ services:
     container_name: dev-mssqlserver2019
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=Password123!
+      - MSSQL_SA_PASSWORD=Password123!
       - MSSQL_PID=Developer
     ports:
       - "14333:1433"
@@ -17,7 +17,7 @@ services:
     container_name: dev-mssqlserver2022
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=Password123!
+      - MSSQL_SA_PASSWORD=Password123!
       - MSSQL_PID=Developer
     ports:
       - "14334:1433"
