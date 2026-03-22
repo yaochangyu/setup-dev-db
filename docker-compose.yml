@@ -1,8 +1,7 @@
 services:
   mssqlserver2019:
-    image: mcr.microsoft.com/mssql/server:2019-CU28-ubuntu-20.04
+    image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: dev-mssqlserver2019
-    user: root
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=Password123!
@@ -10,13 +9,12 @@ services:
     ports:
       - "14333:1433"
     volumes:
-      - ./data/mssqlserver2019:/var/opt/mssql
+      - mssql2019_data:/var/opt/mssql
     restart: always
 
   mssqlserver2022:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: dev-mssqlserver2022
-    user: root
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=Password123!
@@ -24,13 +22,12 @@ services:
     ports:
       - "14334:1433"
     volumes:
-      - ./data/mssqlserver2022:/var/opt/mssql
+      - mssql2022_data:/var/opt/mssql
     restart: always
 
   postgresql16:
     image: postgres:16.4-alpine
     container_name: dev-postgresql16
-    user: root
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=Password123!
@@ -38,7 +35,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - ./data/postgresql16:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     restart: always
 
   redis7:
@@ -48,5 +45,11 @@ services:
     ports:
       - "6380:6379"
     volumes:
-      - ./data/redis7:/data
+      - redis7_data:/data
     restart: always
+
+volumes:
+  postgres_data:
+  mssql2019_data:
+  mssql2022_data:
+  redis7_data:
