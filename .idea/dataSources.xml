@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="dev-mssqlserver2019" uuid="f1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://localhost:14333;encrypt=false</jdbc-url>
+      <user-name>sa</user-name>
+      <user-password>Password123!</user-password>
+    </data-source>
+    <data-source source="LOCAL" name="dev-mssqlserver2022" uuid="a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5e">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://localhost:14334;encrypt=false</jdbc-url>
+      <user-name>sa</user-name>
+      <user-password>Password123!</user-password>
+    </data-source>
+    <data-source source="LOCAL" name="dev-postgresql16" uuid="b1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5433/mydb</jdbc-url>
+      <user-name>admin</user-name>
+      <user-password>Password123!</user-password>
+    </data-source>
+    <data-source source="LOCAL" name="dev-redis7" uuid="c1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c6a">
+      <driver-ref>redis</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.intellij.database.remote.jdbc.helpers.RedisJdbcDriver</jdbc-driver>
+      <jdbc-url>jdbc:redis://localhost:6380/0</jdbc-url>
+      <user-name>default</user-name>
+      <user-password>Password123!</user-password>
+    </data-source>
+  </component>
+</project>
